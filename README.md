@@ -33,7 +33,7 @@ return [
     ...
 ];
 ```
-#execute the migration here:
+execute the migration here:
 ```
 yii migrate --migrationPath=@bigm/log/migrations
 ```
