@@ -31,6 +31,12 @@ return [
         ...
     ],
     ...
+    'components' => [
+            ...
+            'mylog' => [
+                'class' => 'bigm\log\Log',
+            ]
+        ],
 ];
 ```
 execute the migration here:
@@ -41,4 +47,17 @@ You can then access Yii2-log through the following URL:
 
 ```
 http://localhost/path/to/index.php?r=log
+```
+When you need add a log use this code:
+```
+<?php
+use Yii;
+...
+Yii::$app->mylog->info($message);
+Yii::$app->mylog->error($message);
+Yii::$app->mylog->warning($message);
+Yii::$app->mylog->debug($message);
+or
+Yii::$app->mylog->log($message,'TAG','LEVEL');
+...
 ```

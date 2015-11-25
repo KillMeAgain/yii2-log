@@ -21,7 +21,7 @@ class Log
     public function debug($data,$level = "0"){
         return $this->log($data,'DEBUG',$level);
     }
-    public function waring($data,$level = "0"){
+    public function warning($data,$level = "0"){
         return $this->log($data,'WARING',$level);
     }
     public function log($data,$tag = 'INFO', $level = "0"){
